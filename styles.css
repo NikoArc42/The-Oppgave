@@ -1,24 +1,60 @@
+:root{
+--bg-dark: hsl(112 100% 1%);
+--bg: hsl(105 100% 2%);
+--bg-light: hsl(98 100% 4%);
+--text: hsl(96 100% 87%);
+--text-muted: hsl(95 34% 62%);
+--highlight: hsl(84 100% 19%);
+--border: hsl(87 100% 11%);
+--border-muted: hsl(98 100% 6%);
+--primary: hsl(93 48% 57%);
+--secondary: hsl(279 82% 77%);
+--danger: hsl(8 79% 66%);
+--warning: hsl(54 100% 31%);
+--success: hsl(156 68% 43%);
+--info: hsl(217 94% 69%);
+}
+
+
 body {
   margin: 1rem 4rem;
+  background-color: var(--bg);
+  color: var(--text-muted);
 }
 
 header {
   height: 4rem;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-light);
+  text-align: center;
+}
+
+main {
+  background-color: var(--border);
 }
 
 footer {
   height: 2rem;
-  border-top: 1px solid;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-light);
+}
+
+#addTaskSection {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
 }
 
 #showPop {
   background-color: blueviolet;
-  color: red;
+  color: var(--text);
+  width: 150px;
+  height: 2rem;
 }
 
 #pageContainer {
-  border: 1px solid;
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -26,7 +62,7 @@ footer {
 }
 
 #popContainer {
-  border: 1px solid;
+  border: 1px solid var(--border);
   width: 25rem;
   height: 5rem;
   display: flex;
@@ -35,7 +71,7 @@ footer {
   position: absolute;
   margin-left: calc(50vw - 12.5rem);
   top: 10rem;
-  background-color: yellow;
+  background-color: var(--bg-dark);
 }
 
 .hidden {

@@ -16,10 +16,18 @@ taskButton.addEventListener("click", (ev) => {
     const taskDelete = document.createElement("button");
 
     taskTextSpan.textContent = taskText.value;
-    taskDelete.textContent = "KillColor";
+    taskDelete.textContent = "Delete";
 
     taskItem.appendChild(taskTextSpan);
     taskItem.appendChild(taskDelete);
     
     taskListen.appendChild(taskItem);
+
+    taskDelete.addEventListener("click", (ev) => {
+        ev.target.parentElement.remove();
+        
+    });
+
+    taskText.value = ""
+    popContainer.classList.toggle("hidden");
 })
