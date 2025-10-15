@@ -11,5 +11,15 @@ showPopButton.addEventListener("click", () => {
 taskButton.addEventListener("click", (ev) => {
     ev.preventDefault();
     
+    const taskItem = document.createElement("li");
+    const taskTextSpan = document.createElement("span");
+    const taskDelete = document.createElement("button");
+
+    taskTextSpan.textContent = taskText.value;
+    taskDelete.textContent = "KillColor";
+
+    taskItem.appendChild(taskTextSpan);
+    taskItem.appendChild(taskDelete);
     
+    taskListen.appendChild(taskItem);
 })
